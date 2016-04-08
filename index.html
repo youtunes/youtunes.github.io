@@ -12,7 +12,6 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-76146257-1', 'auto');
       ga('send', 'pageview');
     </script>
@@ -22,8 +21,16 @@
       <img src="Images/YoutunesHeaderImg.png">
       <h2>Click below to download</h2>
       <div class="row">
-          <div class="lefthalf"><button onclick="ga('send', 'event', 'mac', 'download');">Mac Download</button></div>
-          <div class="righthalf"><button onclick="ga('send', 'event', 'windows', 'download');">Windows Download</button></div>
+          <div class="lefthalf">
+              <form action="https://s3.amazonaws.com/youtunes-download-hosting/YoutunesInstaller.dmg">
+                <button onclick="ga('send', 'event', 'mac', 'download');">Mac Download</button>
+              </form>
+          </div>
+          <div class="righthalf">
+              <form action="https://s3.amazonaws.com/youtunes-download-hosting/YoutunesSetup.exe">
+                <button onclick="ga('send', 'event', 'windows', 'download');">Windows Download</button>
+              </form>
+          </div>
       </div>
       <div class="break"></div>
       <div class="bluebackground">
